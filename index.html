@@ -5,20 +5,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>To&ndash;Do List</title>
 	<link rel="stylesheet" href="assets/css/app.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+	<!-- Fontawesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 <body>
 
-	<div id="container">
-		<h1>To&ndash;do List</h1>
-		<input class="input-toDo" type="text" placeholder="Add a todo">
-		<button class="btn-addTodo" type="button">Add</button>
-		<ul>
-			<li><span>X</span> Clean bedroom</li>
-			<li><span>X</span> Eat food</li>
-			<li><span>X</span> Have sex</li>
-		</ul>
+	<div id="todo-container">
+		<div class="todo-header">
+			<h1>Todo List</h1>
+			<button title="Add New Todo" class="btn-addTodo" type="button"><i class="fas fa-plus-circle"></i></button>
+		</div>
 
-		<button id="clearTodo" type="button">Clear All</button>
+		<div class="todo-body">
+			<input class="input-toDo" type="text" placeholder="Add New Todo">
+			<ul>
+				<li><span class="btn-removeTodo"><i class="fas fa-trash"></i></span> Clean bedroom</li>
+				<li><span class="btn-removeTodo"><i class="fas fa-trash"></i></span> Eat food</li>
+				<li><span class="btn-removeTodo"><i class="fas fa-trash"></i></span> Have sex</li>
+			</ul>
+		</div>
+		
+		<div class="todo-action">
+			<button id="clearTodo" type="button">Clear All</button>
+		</div>
 	</div>
 	
 	<script src="assets/js/lib/jquery-3.3.1.min.js"></script>

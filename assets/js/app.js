@@ -8,6 +8,10 @@ $(function() {
 		removeTodo();
 	}
 
+	$(".btn-addTodo").click(function() {
+		$(".input-toDo").toggleClass("toggleTodoInput");
+	});
+
 
 	// Clear everything
 	function clearTodo() {
@@ -40,8 +44,8 @@ $(function() {
     		if (inputVal === "") {
     			return;
     		} else {
-    			$("ul").append(`<li><span>X</span> ${inputVal}</li>`);
-    			$(this).val("").blur();
+    			$("ul").append(`<li><span class="btn-removeTodo"><i class="fas fa-trash"></i></span> ${inputVal}</li>`);
+    			$(this).val("");
     		}
     	}
     });
