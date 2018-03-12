@@ -31,10 +31,12 @@ $(function() {
     $(".input-toDo").keypress(function(e) {
     	if (e.which === 13) {
     		let inputVal = $(this).val();
-    		$("ul").append(`<li><span>X</span> ${inputVal}</li>`);
-    		// Clear input
-    		inputVal = null;
-
+    		if (inputVal === "") {
+    			return;
+    		} else {
+    			$("ul").append(`<li><span>X</span> ${inputVal}</li>`);
+    			$(this).val("").blur();
+    		}
     	}
     });
 
