@@ -3,12 +3,14 @@ ul {
 	padding: 0;
 }
 
+
 #container {
 	margin: 0 auto;
 	width: 460px;
 	max-width: 100%;
 	border: 1px solid gray;
 }
+
 
 .done {
 	color: gray;
