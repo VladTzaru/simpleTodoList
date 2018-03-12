@@ -1,0 +1,6 @@
+#container {
+	margin: 0 auto;
+	width: 460px;
+	max-width: 100%;
+	background: gray;
+}
