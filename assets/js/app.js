@@ -16,6 +16,7 @@ $(function() {
 	// Clear everything
 	function clearTodo() {
 		$("li").remove();
+		checkIsEmpty();
 	}
     
 
@@ -31,6 +32,7 @@ $(function() {
 	    $("ul").on("click", "span", function(e) {
 	    	$(this).parent().fadeOut("1000", "linear", function() {
 	    		$(this).remove();
+	    		checkIsEmpty();
 	    	});
 	    	e.stopPropagation();
 	    });
@@ -46,9 +48,25 @@ $(function() {
     		} else {
     			$("ul").append(`<li><span class="btn-removeTodo"><i class="fas fa-trash"></i></span> ${inputVal}</li>`);
     			$(this).val("");
+    			checkIsEmpty();
     		}
     	}
     });
+
+    function isEmpty(e) {
+    	return !$.trim(e.html())
+    }
+
+    function checkIsEmpty() {
+    	if (isEmpty($("ul"))) {
+    		$(".notification").remove();
+    		$(".todo-body").append(`<p class="notification"><i class="fas fa-exclamation-circle"></i> Add New Todo</p>`);
+    	} else {
+    		$(".notification").remove();
+    	}
+    }
+    
+
 
 
     // Completely clear toDo

@@ -51,8 +51,14 @@ li {
 	background-color: white;
 	color: #1d7f96;
 	font-size: 18px;
+	user-select: none;
 	height: 46px;
 	line-height: 46px;
+	width: 100%;
+	padding-right: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 li:nth-child(2n) {
@@ -101,10 +107,24 @@ li:hover span {
 	color: #8db7c8;
 }
 
+.copyright {
+	float: right;
+	color: white;
+	font-size: 12px;
+}
+
 #clearTodo {
 	color: white;
 	font-size: 16px;
 	border: 1px solid white;
+}
+
+.notification {
+	text-align: center;
+	margin: 0;
+	padding: 16px;
+	font-size: 24px;
+	color: #e3c6d6;
 }
 
 #clearTodo:hover {
@@ -113,6 +133,7 @@ li:hover span {
 }
 
 .input-toDo {
+	display: none;
 	font-size: 18px;
 	background-color: #f3f3f3;
 	width: 100%;
@@ -151,7 +172,7 @@ li:hover span {
 }
 
 .toggleTodoInput {
-	display: none;;
+	display: block;
 }
 
 
