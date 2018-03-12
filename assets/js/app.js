@@ -40,10 +40,5 @@ $(function() {
     	}
     });
 
-    $(".btn-addTodo").on("click", function() {
-    	alert("bang");
-    })
-
-
 
 });
