@@ -7,6 +7,12 @@ $(function() {
 		toggleDone();
 		removeTodo();
 	}
+
+
+	// Clear everything
+	function clearTodo() {
+		$("li").remove();
+	}
     
 
 	// Do / Undo a toDo
@@ -39,6 +45,10 @@ $(function() {
     		}
     	}
     });
+
+
+    // Completely clear toDo
+    $("#clearTodo").click(clearTodo);
 
 
 });
