@@ -1,6 +1,16 @@
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
 #container {
 	margin: 0 auto;
 	width: 460px;
 	max-width: 100%;
-	background: gray;
+	border: 1px solid gray;
+}
+
+.done {
+	color: gray;
+	text-decoration: line-through;
 }
